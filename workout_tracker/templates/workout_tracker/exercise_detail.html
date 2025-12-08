@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+</head>
+<body>
+    <h1>Exercise Detail</h1>
+    <p>Exercise: {{exercise.exercise_name.title}}</p>
+    <p>Category: {{exercise.exercise_category.category_name.title}}</p>
+    <p>Muscle Group: </p>
+    {% if exercise_muscle_group %}
+        {% for muscle_group in exercise_muscle_group %}
+            <ul>
+                <li>{{muscle_group.muscle_group.muscle_group_name.title}}</li> 
+            </ul>
+        {% endfor %}
+    {% else %}
+        <p>No muscle group attached to this exercise</p>
+    {% endif %}
+</body>
+</html> 
