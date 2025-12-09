@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+</head>
+<body>
+    <form action="" method="post">
+    {% csrf_token %}
+
+    <legend><h1>Add Exercises</h1></legend>
+    <fieldset>
+
+        <label for="exercise_name">Exercise Name: </label>
+        <input type="text" id="exercise_name" name="exercise_name" required>
+        
+        <fieldset>
+        <legend>Select exercise category:</legend>
+            <div>
+                <input type="radio" name="category" id="cardio" value="cardio" required>
+                <label for="cardio">Cardio</label>
+            </div>
+
+            <div>
+                <input type="radio" name="category" id="strength" value="strength">
+                <label for="strength">Strength</label>
+            </div>
+
+            <div>
+                <input type="radio" name="category" id="flexibility" value="flexibility">
+                <label for="flexibility">Flexibility</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+        <legend>Choose the exercise's muscle group:</legend>
+
+        <div>
+            <input type="checkbox" name="chest" id="chest" value="chest">
+            <label for="chest">Chest</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="back" id="back" value="back">
+            <label for="back">Back</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="leg" id="leg" value="leg">
+            <label for="leg">Leg</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="arm" id="arm" value="arm">
+            <label for="arm">Arm</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="shoulder" id="shoulder" value="shoulder">
+            <label for="shoulder">Shoulder</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="abs" id="abs" value="abs">
+            <label for="abs">Abs</label>
+        </div>
+
+        </fieldset>
+
+    </fieldset>
+    <input type="submit">
+    </form>
+</body>
+</html>

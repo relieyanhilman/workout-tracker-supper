@@ -1,4 +1,4 @@
-from django.http import Http404, HttpResponse
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 
 from .models import Exercise, ExerciseMuscleGroup
@@ -23,3 +23,7 @@ def detail_exercise(request, exercise_id):
         "workout_tracker/exercise_detail.html",
         {"exercise": exercise, "exercise_muscle_group": exercise_muscle_group},
     )
+
+
+def create_exercise(request):
+    return render(request, "workout_tracker/exercise_create.html")

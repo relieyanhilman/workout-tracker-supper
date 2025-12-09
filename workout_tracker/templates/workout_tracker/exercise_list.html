@@ -10,12 +10,14 @@
     {% if exercise_list %}
         <ul>
         {% for exercise in exercise_list %}
-            <li><a href="/workout_tracker/v1/exercises/{{exercise_id}}/">{{exercise.exercise_name}}</a></li>
+            <li><a href="{% url 'workout_tracker:exercise_detail' exercise.id %}">{{exercise.exercise_name}}</a></li>
         {% endfor %}
         </ul>
     {% else %}
         <p>No exercises are available</p>
     {% endif %}
+
+    <a href="{% url 'workout_tracker:create_exercise' %}">Add new exercise</a>
 </body>
 </html>
 
