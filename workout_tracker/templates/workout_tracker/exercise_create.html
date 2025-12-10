@@ -6,7 +6,7 @@
     <title>Workout Tracker</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="{% url 'workout_tracker:post_exercise' %}" method="post">
     {% csrf_token %}
 
     <legend><h1>Add Exercises</h1></legend>
@@ -37,32 +37,32 @@
         <legend>Choose the exercise's muscle group:</legend>
 
         <div>
-            <input type="checkbox" name="chest" id="chest" value="chest">
+            <input type="checkbox" name="muscle_group" id="chest" value="chest">
             <label for="chest">Chest</label>
         </div>
 
         <div>
-            <input type="checkbox" name="back" id="back" value="back">
+            <input type="checkbox" name="muscle_group" id="back" value="back">
             <label for="back">Back</label>
         </div>
 
         <div>
-            <input type="checkbox" name="leg" id="leg" value="leg">
+            <input type="checkbox" name="muscle_group" id="leg" value="leg">
             <label for="leg">Leg</label>
         </div>
 
         <div>
-            <input type="checkbox" name="arm" id="arm" value="arm">
+            <input type="checkbox" name="muscle_group" id="arm" value="arm">
             <label for="arm">Arm</label>
         </div>
 
         <div>
-            <input type="checkbox" name="shoulder" id="shoulder" value="shoulder">
+            <input type="checkbox" name="muscle_group" id="shoulder" value="shoulder">
             <label for="shoulder">Shoulder</label>
         </div>
 
         <div>
-            <input type="checkbox" name="abs" id="abs" value="abs">
+            <input type="checkbox" name="muscle_group" id="abs" value="abs">
             <label for="abs">Abs</label>
         </div>
 

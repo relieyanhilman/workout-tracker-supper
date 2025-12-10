@@ -10,4 +10,5 @@ urlpatterns = [
         "v1/exercises/<int:exercise_id>/", views.detail_exercise, name="exercise_detail"
     ),
     path("v1/create_exercise", views.create_exercise, name="create_exercise"),
+    path("v1/post_exercise", views.post_exercise, name="post_exercise"),
 ]
